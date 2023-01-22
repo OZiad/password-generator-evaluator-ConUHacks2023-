@@ -35,8 +35,9 @@ document.getElementById("GearButton").addEventListener("click", function(){
 });
   var button1 = document.getElementById("CapButton");
 
-  button1.addEventListener("click", function() {
+    button1.addEventListener("click", function() {
     button1.classList.toggle("glow");
+    
   });
   var button2 = document.getElementById("SymButton");
 
