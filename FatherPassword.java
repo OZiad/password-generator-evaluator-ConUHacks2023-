@@ -21,14 +21,8 @@ public class FatherPassword {
     public static void passwordChecker(String password){
         //if(randomness(password)
     }
-public static void main(String[] args) {
-    System.out.print(randomness("asd81aj2jabj1j33befjak2j_1n3123^#84"));
-    
+
 public static void main(String[] args) {
     System.out.print(randomness("Francis123$"));
     }
 }
-
-
-
-
