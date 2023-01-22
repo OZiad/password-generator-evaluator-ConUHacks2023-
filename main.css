@@ -1,8 +1,73 @@
+html{
+  background-color: #CCF381;
+}
+#banner h1 {
+  animation: zoomIn 1s ease-in-out;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale3d(.5, .5, .5);
+    opacity: 0;
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+h1{
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 40px #bbee5b;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 60px #a9f122;
+    transform: scale(1.1);
+  }
+  100% {
+    text-shadow: 0 0 70px #84ff00;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 60px #a9f122;
+    transform: scale(1.1);
+  }
+}
+#banner {
+  background-color:  white;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 1.3cm;
+  transform: translate(-50%, 0);
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+#line {
+  background-color:  white;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  font-size: .2cm;
+  transform: translate(-50%, 0);
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
 .center-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 87vh; /* 100% of the viewport height */
+    height: 85vh; /* 100% of the viewport height */
     margin: 0px;
     
   }
@@ -56,18 +121,153 @@
     position: absolute;
     left: -120%;
   }
+
   #CapButton {
     position: absolute;
-    width: 570%;
+    width: 670%;
     height: 120%;
-    top: 28%;
-    left: 75%;
-    background: none;
+    top: 29%;
+    left: 40%;
     border: none;
-    background-color: none;
+    background: none;
+    box-shadow: 0 0 0px #4831D4;
   }
   #CapButton:hover{
-    box-shadow: 0px 0px 50px   rgb(2, 56, 109);
+    box-shadow: 0px 0px 50px  #4831D4;
+
+  } 
+  #CapButton.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #SymButton {
+    position: absolute;
+    width: 670%;
+    height: 120%;
+    top: 182%;
+    left: 40%;
+    border: none;
+    background: none;
+  }
+  #SymButton:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+
+  } 
+  #SymButton.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #Button {
+    position: absolute;
+    width: 670%;
+    height: 120%;
+    top: 334%;
+    left: 40%;
+    border: none;
+    background: none;
+  }
+  #Button:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  }
+  #Button.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  } 
+  #ButtonOne {
+    position: absolute;
+    width: 670%;
+    height: 120%;
+    top: 29%;
+    left: 40%;
+    border: none;
+    background: none;
+  }
+  #ButtonOne:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  } 
+  #ButtonOne.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #ButtonTwo {
+    position: absolute;
+    width: 670%;
+    height: 120%;
+    top: 182%;
+    left: 40%;
+    border: none;
+    background: none;
+  }
+  #ButtonTwo:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  }
+  #ButtonTwo.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #ButtonThree {
+    position: absolute;
+    width: 670%;
+    height: 120%;
+    top: 334%;
+    left: 40%;
+    border: none;
+    background: none;
+  }
+  #ButtonThree:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  } 
+  #ButtonThree.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #ButtonFour {
+    position: absolute;
+    width: 183%;
+    height: 40%;
+    top: 43.3%;
+    left: 47%;
+    border: none;
+    background: none;
+  }
+  #ButtonFour:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  } 
+  #ButtonFour.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #ButtonFive {
+    position: absolute;
+    width: 183%;
+    height: 40%;
+    top: 94.3%;
+    left: 47%;
+    border: none;
+    background: none;
+  }
+  #ButtonFive:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  } 
+  #ButtonFive.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
+  }
+  #ButtonSix {
+    position: absolute;
+    width: 183%;
+    height: 40%;
+    top: 144.3%;
+    left: 47%;
+    border: none;
+    background: none;
+  }
+  #ButtonSix:hover{
+    box-shadow: 0px 0px 50px  #4831D4;
+  } 
+  #ButtonSix.glow {
+    border: 5px solid #4831D4 ;
+    box-shadow: 0px 0px 30 #4831D4;
   }
   .cylinderContainer2 {
     width: 30px; /* total width of the 3 cylinders */
@@ -101,10 +301,11 @@
     text-align: bottom;
     opacity: 80%;
     width: 200px;
-    height: 50px;
-    border-color: dodgerblue;
-    border-radius: 20px 20px 20px 20px; /* make the cylinder */
-    background: dodgerblue;
+    height: 45px;
+    border-color:#6f60d0;
+    border:  3px solid ;
+    border-radius: 5px 5px 5px 5px; /* make the cylinder */
+    background: white;
     float: center;
     margin: 10px;
     transition: transform 0.5s; /* enable smooth transition */
@@ -119,11 +320,12 @@
     margin: 0px;
     border: none; 
     font-size: .6cm;
-    color: dodgerblue;
+    color: #4831D4;
     background: none;
+    
   }
   #GenerateButton:hover {
-    text-shadow: 0 0 14px rgb(2, 56, 109); 
+    text-shadow: 0 0 20px #4831D4; 
   }
   #unhideButton {
     position: absolute;
@@ -135,15 +337,16 @@
     border: none; 
     background: none;
     font-size: larger;
-    color: dodgerblue;
+    color: #4831D4;
   }
   #unhideButton:hover {
-    text-shadow: 0 0 14px rgb(2, 56, 109); /* add a white glow around the button */
+    text-shadow: 0 0 14px #4831D4; /* add a white glow around the button */
   }
   label {    
     position: absolute;
     top: 40%;
-    left: 48%;
+    left: 47.7%;
+    font-weight: bolder;
     transform: translate(-50%, -60%);
     text-align: center;
     font-size: larger;
@@ -161,15 +364,16 @@
     
   }
   
+ /*makes text box appear cool*/
   /* Animation for typing effect */
-  @keyframes typing {
+  /*@keyframes typing {
     from {
       width: 0;
     }
     to {
       width: 26%;
     }
-  }
+  }*/
   
   /* Animation for blink-caret effect */
   @keyframes blink-caret {
