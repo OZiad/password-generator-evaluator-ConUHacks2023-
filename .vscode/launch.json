@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch FatherPassword",
+            "request": "launch",
+            "mainClass": "FatherPassword",
+            "projectName": "ConUHacks2023_c23a1b78"
+        },
+        {
+            "type": "java",
+            "name": "Launch HackingTime",
+            "request": "launch",
+            "mainClass": "HackingTime",
+            "projectName": "ConUHacks2023_c23a1b78"
+        },
+        {
+            "type": "java",
+            "name": "Launch PasswordChecker",
+            "request": "launch",
+            "mainClass": "PasswordChecker",
+            "projectName": "ConUHacks2023_c23a1b78"
+        },
+        {
+            "type": "java",
+            "name": "Launch PasswordGenerator",
+            "request": "launch",
+            "mainClass": "PasswordGenerator",
+            "projectName": "ConUHacks2023_c23a1b78"
+        }
+    ]
+}
