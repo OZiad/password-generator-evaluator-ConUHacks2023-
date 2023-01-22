@@ -134,7 +134,7 @@ h1{
   }
   #CapButton:hover{
     box-shadow: 0px 0px 50px  #4831D4;
-
+    
   } 
   #CapButton.glow {
     border: 5px solid #4831D4 ;
@@ -316,16 +316,15 @@ h1{
     left: 54.5%;
     transform: translate(-50%, -60%);
     text-align: center;
-    padding: 0px 0px;
+    padding: none;
     margin: 0px;
     border: none; 
     font-size: .6cm;
     color: #4831D4;
     background: none;
-    
   }
   #GenerateButton:hover {
-    text-shadow: 0 0 20px #4831D4; 
+    text-shadow: 0 0 30px #4831D4; 
   }
   #unhideButton {
     position: absolute;
