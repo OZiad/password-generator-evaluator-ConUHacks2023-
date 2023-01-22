@@ -4,15 +4,54 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Etch a Sketch</title>
+    <title>PasswordGenerator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js' defer></script>
 </head>
 
 <body>
-    <h1>Password Generator</h1>
-    <button class="new-grid">New Grid</button>
+  <div id="banner">
+    <h1>Cracker</h1>
+  </div>
+  <div id="line">
+    <h2>by Francis Shayne Stefan Omar</h2>
+  </div>
+    <div class="center-box"> 
+        <img src="gear-g5965a21e1_640.png" id="Gear"> 
+        <button id="GearButton"></button>
+        <button id="GenerateButton">Generate</button>
+        <label for="myTextbox">Enter Password or </label>
+        <input type="text" id="myTextbox" placeholder="Enter password" maxlength="85">
+        <button id="unhideButton">Unhide Password</button>
+        <div id="gridContainer">
+            <div class="cylinderContainer1">
+              <div class="cylinder">Capitalize</div>
+                <button id="CapButton"></button>
+              <div class="cylinder"></div>
+                <button id="SymButton">Symbols</button>
+              <div class="cylinder"></div>
+                <button id="Button">Button</button>
+            </div>
+            <div class="cylinderContainer2">
+              <div class="cylinder"></div>
+                <button id="ButtonOne">Button</button>
+              <div class="cylinder"></div>
+                <button id="ButtonTwo">Button</button>
+              <div class="cylinder"></div>
+                <button id="ButtonThree">Button</button>
+            </div>
+            <div class="cylinderContainer3">
+            </div>
+            <div class="cylinderContainer4">
+              <div class="cylinder"></div>
+                <button id="ButtonFour">Button</button>
+              <div class="cylinder"></div>
+                <button id="ButtonFive">Button</button>
+              <div class="cylinder"></div>
+                <button id="ButtonSix">Button</button>
+            </div>
+      </div>
     <div id='container'>
     </div>
 </body>
