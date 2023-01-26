@@ -7,7 +7,6 @@ public class HackingTime extends FatherPassword {
     private static final String upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String symbols = "!@#$%^&*_=+-/";
     private static final String numbers = "0123456789";
-    private static final String combo = lowerCaseLetters + upperCaseLetters + symbols + numbers;
     private static final Scanner scan = new Scanner(System.in);
     private static final Random rnd = new Random();
    
@@ -62,6 +61,7 @@ public static void main(String[] args) {
     String password = passwordGenerator(passwordLength, useUpperCase, useLowerCase, useNumbers, useSpecialSymbols);
     System.out.println("Generated password: " + password);
 
+    
 
         int score = 0;
         if (passwordLength >= 8) {
@@ -79,12 +79,18 @@ public static void main(String[] args) {
         if (useSpecialSymbols) {
             score++;
         }
+        if(FatherPassword.randomness(password) >= 3){
+            score++;
+        }
 
-        System.out.println("Password strength: ");
+       
+        
+
+        System.out.println("Password Strength: ");
         if (score == 5) {
-            System.out.println("Very Strong");
-        } else if (score >= 3) {
             System.out.println("Strong");
+        } else if (score >= 3) {
+            System.out.println("Moderate");
         } else {
             System.out.println("Weak");
         }
