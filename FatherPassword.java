@@ -16,5 +16,4 @@ public class FatherPassword {
         entropy = -entropy;
         return entropy;
     }
-
 }
