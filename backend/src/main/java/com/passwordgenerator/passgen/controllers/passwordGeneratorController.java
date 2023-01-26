@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class passwordGeneratorController {
     @GetMapping
     public String hello() {
-        return "Hello World!!";
+        return "testing 123";
     }
-}
+}       

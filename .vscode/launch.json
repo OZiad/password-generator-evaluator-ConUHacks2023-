@@ -6,10 +6,17 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch HackingTime",
             "request": "launch",
             "mainClass": "HackingTime",
             "projectName": ""
+=======
+            "name": "Launch PassgenApplication",
+            "request": "launch",
+            "mainClass": "com.passwordgenerator.passgen.PassgenApplication",
+            "projectName": "passgen"
+>>>>>>> 651ff3f (formatting changes)
         },
         {
             "type": "java",
