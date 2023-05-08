@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PasswordChecker",
+            "request": "launch",
+            "mainClass": "PasswordChecker",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

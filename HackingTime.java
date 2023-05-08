@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class HackingTime extends FatherPassword {
+public class HackingTime extends FatherPassword {             
 
     private static final String lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
     private static final String upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -63,25 +63,25 @@ public static void main(String[] args) {
 
     
 
-        int score = 0;
-        if (passwordLength >= 8) {
-            score++;
-        }
-        if (useUpperCase) {
-            score++;
-        }
-        if (useLowerCase) {
-            score++;
-        }
-        if (useNumbers) {
-            score++;
-        }
-        if (useSpecialSymbols) {
-            score++;
-        }
+        // int score = 0;
+        // if (passwordLength >= 8) {
+        //     score++;
+        // }
+        // if (useUpperCase) {
+        //     score++;
+        // }
+        // if (useLowerCase) {
+        //     score++;
+        // }
+        // if (useNumbers) {
+        //     score++;
+        // }
+        // if (useSpecialSymbols) {
+        //     score++;
+        // }
         if(FatherPassword.randomness(password) >= 3){
             score++;
-        }
+        // }
 
        
         
