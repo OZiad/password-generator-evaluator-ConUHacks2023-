@@ -1,8 +1,11 @@
+setTimeout(function() {
+  document.querySelector(".loading").style.display = "none";
+  document.querySelector(".main-content").classList.add("show");
+}, 3000);
 document.getElementById("GenerateButton").addEventListener("click", function(){
     var password = generatePassword();
     document.getElementById("myTextbox").value = password;
  });
-
  function generatePassword() {
     var length = 15,
         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()",
@@ -80,4 +83,16 @@ document.getElementById("GearButton").addEventListener("click", function(){
     button9.classList.toggle("glow");
   });
 
-
+  let strengthNumber = Math.floor(Math.random() * 8) + 1; // generates a random number between 1 and 8
+  let strengthIndicator = document.querySelector('.strength-indicator');
+  
+  if (strengthNumber <= 2) {
+    strengthIndicator.classList.add('weak');
+  } else if (strengthNumber <= 4) {
+    strengthIndicator.classList.add('moderate');
+  } else if (strengthNumber <= 6) {
+    strengthIndicator.classList.add('strong');
+  } else {
+    strengthIndicator.classList.add('very-strong');
+  }
+  

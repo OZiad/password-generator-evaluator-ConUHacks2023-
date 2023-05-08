@@ -1,10 +1,31 @@
+.main-content {
+  display: none;
+}
+.show {
+  display: block;
+}
+.s {
+  animation-delay: 0.5s;
+}
+.loading {
+  animation: zoomIn 2.3s ease-in-out;
+  animation: fadeInOut 3s;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 html{
-  background-color: #CCF381;
+  background-color: #ffffff;
 }
-#banner h1 {
-  animation: zoomIn 1s ease-in-out;
-  animation: pulse 2s ease-in-out infinite;
-}
+
 @keyframes zoomIn {
   from {
     transform: scale3d(.5, .5, .5);
@@ -16,39 +37,24 @@ html{
   }
 }
 h1{
+  animation: ease;
   animation: pulse 2s ease-in-out infinite;
 }
 @keyframes pulse {
   0% {
-    text-shadow: 0 0 40px #bbee5b;
+    text-shadow: 0 0 80px rgb(0, 201, 17);
     transform: scale(1);
   }
   50% {
-    text-shadow: 0 0 60px #a9f122;
+    text-shadow: 0 0 60px rgb(0, 201, 17);
     transform: scale(1.1);
   }
   100% {
-    text-shadow: 0 0 70px #84ff00;
+    text-shadow: 0 0 80px rgb(0, 201, 17);
     transform: scale(1);
   }
-  50% {
-    text-shadow: 0 0 60px #a9f122;
-    transform: scale(1.1);
-  }
 }
-#banner {
-  background-color:  white;
-  color: black;
-  text-align: center;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  font-size: 1.3cm;
-  transform: translate(-50%, 0);
-  width: 100%;
-  transition: width 0.5s ease-in-out;
-}
+
 #line {
   background-color:  white;
   color: black;
@@ -62,7 +68,26 @@ h1{
   width: 100%;
   transition: width 0.5s ease-in-out;
 }
+/* Strength Meter */
+.strength-meter {
+  width: 10%;
+  height: 10px;
+  background-color: #757575;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 47.5%;
+  left: 45.3%;
+}
 
+/* Strength Indicator */
+.strength-indicator {
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .center-box {
     display: flex;
     align-items: center;
@@ -74,7 +99,7 @@ h1{
  
   #Gear {
     position: absolute;
-    top: 47.65%;
+    top: 49.65%;
     left: 49.5%;
     transform: translate(0%, 0%);
     width: 1.7%;
@@ -97,7 +122,7 @@ h1{
   }
   #GearButton {
     position: absolute;
-    top: 48%;
+    top: 50.5%;
     left: 50.3%;
     transform: translate(-50%, -50%);
     padding: 12px 20px;
@@ -130,15 +155,15 @@ h1{
     left: 40%;
     border: none;
     background: none;
-    box-shadow: 0 0 0px #4831D4;
+    box-shadow: 0 0 0px #000000;
   }
   #CapButton:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
-    
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
+
   } 
   #CapButton.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(0, 201, 17);
   }
   #SymButton {
     position: absolute;
@@ -150,12 +175,12 @@ h1{
     background: none;
   }
   #SymButton:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
 
   } 
   #SymButton.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   #Button {
     position: absolute;
@@ -167,11 +192,11 @@ h1{
     background: none;
   }
   #Button:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   }
   #Button.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   } 
   #ButtonOne {
     position: absolute;
@@ -183,11 +208,11 @@ h1{
     background: none;
   }
   #ButtonOne:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   } 
   #ButtonOne.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   #ButtonTwo {
     position: absolute;
@@ -199,11 +224,11 @@ h1{
     background: none;
   }
   #ButtonTwo:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   }
   #ButtonTwo.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   #ButtonThree {
     position: absolute;
@@ -215,11 +240,11 @@ h1{
     background: none;
   }
   #ButtonThree:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   } 
   #ButtonThree.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   #ButtonFour {
     position: absolute;
@@ -231,11 +256,11 @@ h1{
     background: none;
   }
   #ButtonFour:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   } 
   #ButtonFour.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   #ButtonFive {
     position: absolute;
@@ -247,11 +272,11 @@ h1{
     background: none;
   }
   #ButtonFive:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   } 
   #ButtonFive.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   #ButtonSix {
     position: absolute;
@@ -263,11 +288,11 @@ h1{
     background: none;
   }
   #ButtonSix:hover{
-    box-shadow: 0px 0px 50px  #4831D4;
+    box-shadow: 0px 0px 50px  rgb(0, 201, 17);
   } 
   #ButtonSix.glow {
-    border: 5px solid #4831D4 ;
-    box-shadow: 0px 0px 30 #4831D4;
+    border: 5px solid rgb(0, 218, 7) ;
+    box-shadow: 0px 0px 30 rgb(139, 187, 241);
   }
   .cylinderContainer2 {
     width: 30px; /* total width of the 3 cylinders */
@@ -302,7 +327,7 @@ h1{
     opacity: 80%;
     width: 200px;
     height: 45px;
-    border-color:#6f60d0;
+    border-color:rgb(0, 218, 7);
     border:  3px solid ;
     border-radius: 5px 5px 5px 5px; /* make the cylinder */
     background: white;
@@ -312,54 +337,56 @@ h1{
   }
   #GenerateButton {
     position: absolute;
-    top: 40.1%;
-    left: 54.5%;
+    top: 38.8%;
+    left: 55.7%;
     transform: translate(-50%, -60%);
     text-align: center;
     padding: none;
     margin: 0px;
     border: none; 
-    font-size: .6cm;
-    color: #4831D4;
+    font-size: 1cm;
+    color: rgb(0, 218, 7);
     background: none;
   }
   #GenerateButton:hover {
-    text-shadow: 0 0 30px #4831D4; 
+    text-shadow: 0 0 30px rgb(0, 201, 17); 
   }
   #unhideButton {
     position: absolute;
-    top: 43.7%;
-    left: 67%;
+    top: 43.35%;
+    left: 74.2%;
     transform: translate(-50%, -50%);
     padding: 12px 20px;
     margin: 8px 0;
     border: none; 
     background: none;
-    font-size: larger;
-    color: #4831D4;
+    font-size: xx-large;
+    color: rgb(0, 218, 7);
   }
   #unhideButton:hover {
-    text-shadow: 0 0 14px #4831D4; /* add a white glow around the button */
+    text-shadow: 0 0 14px rgb(0, 201, 17);
   }
   label {    
     position: absolute;
-    top: 40%;
-    left: 47.7%;
+    top: 38.8%;
+    left: 46%;
     font-weight: bolder;
     transform: translate(-50%, -60%);
     text-align: center;
-    font-size: larger;
+    font-size: x-large;
     margin: auto;
+    color: #565656;
   }
   #myTextbox {
-    /*border-width: 0.1cm;*/
-    width: 26%;
+    width: 35%;
+    height: 8%;
     padding: 12px 20px;
     margin: 0px;
-    font-size: larger;
+    font-size: xx-large;
     box-sizing: border-box;
     text-align: center;
     animation: typing .8s steps(30, end), blink-caret 0.001s step-end infinite;
+    color: #565656;
     
   }
   
