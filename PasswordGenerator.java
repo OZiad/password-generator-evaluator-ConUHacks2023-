@@ -23,7 +23,7 @@ public class PasswordGenerator {
         Random random = new Random();
         String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String lowerCase = "abcdefghijklmnopqrstuvwxyz";
-        String symbols = "!@#$%&*_-";
+        String symbols = "!@#$%&*_-.";
         String nums = "0123456789";
 
         while (password.length() < length) {
