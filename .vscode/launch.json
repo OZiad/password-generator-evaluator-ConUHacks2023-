@@ -6,9 +6,15 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "PasswordChecker",
             "request": "launch",
             "mainClass": "PasswordChecker",
+=======
+            "name": "Launch HackingTime",
+            "request": "launch",
+            "mainClass": "HackingTime",
+>>>>>>> 0f46c322a3ee80c261c921adea465d7b8d5a57b6
             "projectName": ""
         },
         {

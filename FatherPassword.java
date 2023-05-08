@@ -1,8 +1,9 @@
 public class FatherPassword {
-   
-    public static double randomness (String password){
+
+    public static double randomness(String password) {
         double entropy = 0.0;
-        int[] charCounts = new int[Character.MAX_CODE_POINT + 1]; // Unicode characters can have a maximum value of Character.MAX_CODE_POINT
+        int[] charCounts = new int[Character.MAX_CODE_POINT + 1]; // Unicode characters can have a maximum value of
+                                                                  // Character.MAX_CODE_POINT
         for (int i = 0; i < password.length(); i++) {
             charCounts[password.codePointAt(i)]++;
         }
@@ -17,7 +18,3 @@ public class FatherPassword {
     }
 
 }
-
-
-
-
