@@ -6,22 +6,25 @@ public class PasswordGenerator {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the desired length of the password: ");
         int length = scanner.nextInt();
+        System.out.print("Include numbers in the password? (y/n): ");
+        boolean includeNums = scanner.next().equals("y");
         System.out.print("Include upper case letters in the password? (y/n): ");
         boolean includeUpperCase = scanner.next().equals("y");
         System.out.print("Include lower case letters in the password? (y/n): ");
         boolean includeLowerCase = scanner.next().equals("y");
         System.out.print("Include symbols in the password? (y/n): ");
         boolean includeSymbols = scanner.next().equals("y");
-        String password = generatePassword(length, includeUpperCase, includeLowerCase, includeSymbols);
+        String password = generatePassword(length, includeNums, includeUpperCase, includeLowerCase, includeSymbols);
         System.out.println("Your new password is: " + password);
     }
 
-    public static String generatePassword(int length, boolean includeUpperCase, boolean includeLowerCase, boolean includeSymbols) {
+    public static String generatePassword(int length, boolean includeNums, boolean includeUpperCase, boolean includeLowerCase, boolean includeSymbols) {
         StringBuilder password = new StringBuilder();
         Random random = new Random();
         String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String lowerCase = "abcdefghijklmnopqrstuvwxyz";
-        String symbols = "!@#$%^&*()_+-=[]{}|;':\"<>,.?/\\";
+        String symbols = "!@#$%&*_-";
+        String nums = "0123456789";
 
         while (password.length() < length) {
             if (includeUpperCase) {
@@ -35,6 +38,10 @@ public class PasswordGenerator {
             if (includeSymbols) {
                 int index = random.nextInt(symbols.length());
                 password.append(symbols.charAt(index));
+            }
+            if (includeNums){
+                int index = random.nextInt(nums.length());
+                password.append(nums.charAt(index));
             }
         }
  //shuffle the password
