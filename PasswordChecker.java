@@ -43,11 +43,11 @@ public class PasswordChecker {
         score += 5;
     }
         if (score >= 0 && score <= 21) {
-           strength = ("Your password is weak.");
+           strength = ("Weak.");
         } else if (score > 21 && score <= 30) {
-            strength = ("Your password is moderate.");
+            strength = ("Moderate.");
         } else {
-            strength = ("Your password is strong.");
+            strength = ("Strong.");
         }
     
         return strength;
