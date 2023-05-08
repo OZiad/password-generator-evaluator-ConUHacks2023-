@@ -1,5 +1,7 @@
 package com.passwordgenerator.passgen.controllers;
 
+import java.util.Random;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,17 +64,44 @@ public class passwordGeneratorController {
     // return 0;
     // }
     @GetMapping("/passwordGenerator")
-    public int passwordStrength(@RequestParam(defaultValue = "10", required = false) Integer length,
-            @RequestParam(defaultValue = "true", required = false) boolean upperCase,
-            @RequestParam(defaultValue = "true", required = false) boolean lowerCase,
-            @RequestParam(defaultValue = "true", required = false) Boolean nums,
-            @RequestParam(required = false) boolean symbols) {
-        return length;
-    }
+    public String passwordGenerator(@RequestParam(defaultValue = "10", required = false) Integer length,
+            @RequestParam(defaultValue = "true", required = false) boolean includeUpperCase,
+            @RequestParam(defaultValue = "true", required = false) boolean includeLowerCase,
+            @RequestParam(defaultValue = "true", required = false) Boolean includeNums,
+            @RequestParam(defaultValue = "true", required = false) boolean includeSymbols) {
+        StringBuilder password = new StringBuilder();
+        Random random = new Random();
+        String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        String symbols = "!@#$%&*_-.";
+        String nums = "0123456789";
 
-    @GetMapping("/")
-    public String[] hello() {
-        String[] hello = { "ha", "ha", "ha" };
-        return hello;
+        while (password.length() < length) {
+            if (includeUpperCase) {
+                int index = random.nextInt(upperCase.length());
+                password.append(upperCase.charAt(index));
+            }
+            if (includeLowerCase) {
+                int index = random.nextInt(lowerCase.length());
+                password.append(lowerCase.charAt(index));
+            }
+            if (includeSymbols) {
+                int index = random.nextInt(symbols.length());
+                password.append(symbols.charAt(index));
+            }
+            if (includeNums) {
+                int index = random.nextInt(nums.length());
+                password.append(nums.charAt(index));
+            }
+        }
+        // shuffle the password
+        char[] passwordChars = password.toString().toCharArray();
+        for (int i = 0; i < passwordChars.length; i++) {
+            int randomIndex = random.nextInt(passwordChars.length);
+            char temp = passwordChars[i];
+            passwordChars[i] = passwordChars[randomIndex];
+            passwordChars[randomIndex] = temp;
+        }
+        return new String(passwordChars);
     }
 }
