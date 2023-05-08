@@ -5,30 +5,24 @@ public class PasswordChecker {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your password: ");
         String password = scanner.nextLine();
-        int strength = checkPasswordStrength(password);
-        if (strength >= 0 && strength <= 21) {
-            System.out.println("Your password is weak.");
-        } else if (strength > 21 && strength <= 30) {
-            System.out.println("Your password is moderate.");
-        } else {
-            System.out.println("Your password is strong.");
-        }
+        System.out.println(checkPasswordscore(password));
     }
 
 
-    public static int checkPasswordStrength(String password) {
-        int strength = 0;
+    public static String checkPasswordscore(String password) {
+        int score = 0;
+        String strength;
 
         for(int i = 0; i < password.length(); i++){
             char c = password.charAt(i);
             if (Character.isDigit(c)) {
-                strength += 2;
+                score += 2;
             } else if (Character.isLowerCase(c)) {
-                strength++;
+                score++;
             } else if (Character.isUpperCase(c)) {
-                strength += 2;
+                score += 2;
             } else if (c == '@' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' || c == '+') {
-                strength += 3;
+                score += 3;
             }
         }
         
@@ -46,8 +40,16 @@ public class PasswordChecker {
         entropy = -entropy;
    
         if(entropy >= 3){
-        strength += 5;
+        score += 5;
     }
+        if (score >= 0 && score <= 21) {
+           strength = ("Your password is weak.");
+        } else if (score > 21 && score <= 30) {
+            strength = ("Your password is moderate.");
+        } else {
+            strength = ("Your password is strong.");
+        }
+    
         return strength;
     }
 }
