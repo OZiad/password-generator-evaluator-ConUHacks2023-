@@ -3,16 +3,21 @@ package com.password;
 
 import java.util.Random;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class passwordGeneratorController {
-
+    @GetMapping("/")
+    public String hello(){
+        return "hello";
+    }
     // REST API that returns password strength as a string (weak, medium or strong)
     @GetMapping("/{password}")
     public String passwordStrength(@PathVariable String password) {
@@ -74,7 +79,7 @@ public class passwordGeneratorController {
         Random random = new Random();
         String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String lowerCase = "abcdefghijklmnopqrstuvwxyz";
-        String symbols = "!@#$%&*_-.";
+        String symbols = "!@#$%&*-.";
         String nums = "0123456789";
 
         while (password.length() < length) {
