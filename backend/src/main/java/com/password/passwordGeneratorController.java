@@ -1,4 +1,5 @@
-package com.passwordgenerator.passgen.controllers;
+package com.password;
+
 
 import java.util.Random;
 
