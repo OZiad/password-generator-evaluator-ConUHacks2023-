@@ -99,8 +99,17 @@ const generateButton = document.getElementById('generate-button');
 const generatedPasswordInput = document.getElementById('password');
 
 // Add event listener to the button
-generateButton.addEventListener('click', function() {
+generateButton.addEventListener('click', function () {
   const password = generatePassword();
+  console.log(sliderInput.value);
+  /**
+   * 
+   * Insert password generation logic
+   * 
+   */
+
+
+
   generatedPasswordInput.value = password;
 });
 
@@ -143,4 +152,22 @@ function getRandomCharacter(str) {
   const randomIndex = Math.floor(Math.random() * str.length);
   return str.charAt(randomIndex);
 }
+
+// Slider logic
+
+// Get the slider input element
+const sliderInput = document.getElementById('slider-input');
+
+// Get the slider value element
+const sliderValue = document.getElementById('slider-value');
+
+// Add an event listener to the slider input
+sliderInput.addEventListener('input', () => {
+  // Update the value displayed next to the slider
+  sliderValue.textContent = sliderInput.value;
+  console.log(sliderInput.value);
+});
+
+// Set the initial value displayed next to the slider
+sliderValue.textContent = sliderInput.value;
 

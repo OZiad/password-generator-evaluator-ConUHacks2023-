@@ -34,10 +34,9 @@
 
     <form class="generate-form">
       <label for="password" class="gen-pass">Generate password</label>
-      <input type="password" id="password" readonly required>
+      <input type="text" id="password" readonly required>
       <button type="button" id="generate-button" class="generate-button">Generate</button>
     </form>
-
 
     <div class="container">
       <form class="checkbox-form">
@@ -46,14 +45,23 @@
         </label>
         <label class="checkbox-label">
           <input id="lowercase" type="checkbox" value="">LowerCase
-          <label class="checkbox-label">
-            <input id="symbols" type="checkbox" value="">Symbols
-            <label class="checkbox-label">
-              <input id="numbers" type="checkbox" value="">Numbers
-            </label>
+        </label>
+        <label class="checkbox-label">
+          <input id="symbols" type="checkbox" value="">Symbols
+        </label>
+        <label class="checkbox-label">
+          <input id="numbers" type="checkbox" value="">Numbers
+        </label>
       </form>
+      <div class="slider-container">
+        <label class="slider-label" for="slider-input">Slider: </label>
+        <input type="range" id="slider-input" class="slider-input" min="0" max="15" value="0">
+        <span id="slider-value" class="slider-value">0</span>
+      </div>
     </div>
+
   </div>
+
 </body>
 
 </html>

@@ -95,6 +95,16 @@ body {
   color: #fff;
 }
 
+.generate-form input[type="text"] {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
 .gen-label {
   display: block;
   font-size: 20px;
@@ -178,4 +188,36 @@ input[type='password'] {
 
 .generate-button:hover {
   background-color: #45a049;
+}
+
+
+.container {
+  text-align: center;
+}
+
+.checkbox-form {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.slider-input {
+  width: 200px;
+}
+
+.slider-value {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 5px;
 }
