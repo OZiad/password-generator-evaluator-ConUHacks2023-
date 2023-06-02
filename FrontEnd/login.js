@@ -181,5 +181,3 @@ axios.get('http://localhost:8080/api/passwordGenerator?length=12&nums=1')
   .catch(function(error) {
     console.error('Error:', error);
   });
-
-

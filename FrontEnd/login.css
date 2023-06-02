@@ -173,6 +173,11 @@ input[type='password'] {
 }
 
 .generate-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -199,11 +204,18 @@ input[type='password'] {
   display: inline-block;
   margin-bottom: 10px;
 }
+
 .slider-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+#password {
+  text-align: center;
+  font-weight: bold;
+
 }
 
 .slider-label {
