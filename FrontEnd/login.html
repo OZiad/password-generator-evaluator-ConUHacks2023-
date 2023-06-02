@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password front page</title>
   <link rel="stylesheet" href="login.css" type="text/css">
+  <script src='login.js' defer></script>
 </head>
+
 <body>
   <div class="project">
     <div class="title">
@@ -29,85 +32,28 @@
       <p id="password-strength-text"></p>
     </form>
 
-  
-
     <form class="generate-form">
-      <label for="password" class="gen-pass"> Generate password</label>
-      <input type="password" id="password" required>
+      <label for="password" class="gen-pass">Generate password</label>
+      <input type="password" id="password" readonly required>
+      <button type="button" id="generate-button" class="generate-button">Generate</button>
     </form>
 
 
     <div class="container">
-        <form class="checkbox-form">
+      <form class="checkbox-form">
+        <label class="checkbox-label">
+          <input id="uppercase" type="checkbox" value="">UpperCase
+        </label>
+        <label class="checkbox-label">
+          <input id="lowercase" type="checkbox" value="">LowerCase
           <label class="checkbox-label">
-            <input type="checkbox" value="">UpperCase
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" value="">LowerCase
-          <label class="checkbox-label">
-            <input type="checkbox" value="">Symbols
+            <input id="symbols" type="checkbox" value="">Symbols
             <label class="checkbox-label">
-            <input type="checkbox" value="">Numbers
-          </label>
-        </form>
-      </div>
+              <input id="numbers" type="checkbox" value="">Numbers
+            </label>
+      </form>
+    </div>
   </div>
-
-  <script>
-    const passwordInput = document.getElementById('password-input');
-    const meter = document.getElementById('password-strength-meter');
-    const text = document.getElementById('password-strength-text');
-
-    passwordInput.addEventListener('input', function () {
-      const password = passwordInput.value;
-      const strength = calculatePasswordStrength(password);
-      meter.value = strength;
-      text.innerText = 'Password strength: ' + getPasswordStrengthText(strength);
-    });
-
-    function calculatePasswordStrength(password) {
-      let strength = 0;
-      if (password.match(/[a-z]+/)) {
-        strength++;
-      }
-      if (password.match(/[A-Z]+/)) {
-        strength++;
-      }
-      if (password.match(/[0-9]+/)) {
-        strength++;
-      }
-      if (password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/)) {
-        strength++;
-      }
-      return strength;
-    }
-
-    function getPasswordStrengthText(strength) {
-      switch (strength) {
-        case 0:
-          return '';
-        case 1:
-          return 'Weak';
-        case 2:
-          return 'Moderate';
-        case 3:
-          return 'Strong';
-        case 4:
-          return 'Very strong';
-        default:
-          return '';
-      }
-    }
-  </script>
-  
-  <script>
-    let spanTexts = document.getElementsByTagName("span");
-    window.onload = function(){
-      for(spanText of spanTexts){
-        spanText.classList.add("active");
-      }
-    }
-  </script>
-
 </body>
+
 </html>
