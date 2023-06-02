@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password front page</title>
+  <link rel="stylesheet" href="login.css" type="text/css">
+  <script src='login.js' defer></script>
+</head>
+
+<body>
+  <div class="project">
+    <div class="title">
+      <h1>Password Generator</h1>
+      <div class="back-text">
+        <span>S</span>
+        <span>A</span>
+        <span>F</span>
+        <span>E</span>
+        <span>G</span>
+        <span>E</span>
+        <span>N</span>
+      </div>
+    </div>
+
+    <form class="password-form">
+      <label for="password-input" class="gen-label">Password</label>
+      <input type="password" id="password-input" name="password-input">
+      <meter max="4" id="password-strength-meter"></meter>
+      <p id="password-strength-text"></p>
+    </form>
+
+    <form class="generate-form">
+      <label for="password" class="gen-pass">Generate password</label>
+      <input type="text" id="password" readonly required>
+      <button type="button" id="generate-button" class="generate-button">Generate</button>
+    </form>
+
+    <div class="container">
+      <form class="checkbox-form">
+        <label class="checkbox-label">
+          <input id="uppercase" type="checkbox" value="">UpperCase
+        </label>
+        <label class="checkbox-label">
+          <input id="lowercase" type="checkbox" value="">LowerCase
+        </label>
+        <label class="checkbox-label">
+          <input id="symbols" type="checkbox" value="">Symbols
+        </label>
+        <label class="checkbox-label">
+          <input id="numbers" type="checkbox" value="">Numbers
+        </label>
+      </form>
+      <div class="slider-container">
+        <label class="slider-label" for="slider-input">Slider: </label>
+        <input type="range" id="slider-input" class="slider-input" min="0" max="15" value="0">
+        <span id="slider-value" class="slider-value">0</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -6,51 +6,23 @@
     "configurations": [
         {
             "type": "java",
-<<<<<<< HEAD
-            "name": "Launch HackingTime",
+            "name": "PasswordApplication",
             "request": "launch",
-            "mainClass": "HackingTime",
-            "projectName": ""
-=======
-            "name": "Launch PassgenApplication",
-            "request": "launch",
-            "mainClass": "com.passwordgenerator.passgen.PassgenApplication",
+            "mainClass": "com.password.PasswordApplication",
             "projectName": "passgen"
->>>>>>> 651ff3f (formatting changes)
         },
         {
             "type": "java",
-            "name": "Launch Current File",
+            "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
         {
             "type": "java",
-            "name": "Launch FatherPassword",
+            "name": "PasswordApplication",
             "request": "launch",
-            "mainClass": "FatherPassword",
-            "projectName": "ConUHacks2023_c23a1b78"
-        },
-        {
-            "type": "java",
-            "name": "Launch HackingTime",
-            "request": "launch",
-            "mainClass": "HackingTime",
-            "projectName": "ConUHacks2023_c23a1b78"
-        },
-        {
-            "type": "java",
-            "name": "Launch PasswordChecker",
-            "request": "launch",
-            "mainClass": "PasswordChecker",
-            "projectName": "ConUHacks2023_c23a1b78"
-        },
-        {
-            "type": "java",
-            "name": "Launch PasswordGenerator",
-            "request": "launch",
-            "mainClass": "PasswordGenerator",
-            "projectName": "ConUHacks2023_c23a1b78"
+            "mainClass": "com.password.PasswordApplication",
+            "projectName": "springbootPracitce"
         }
     ]
 }
