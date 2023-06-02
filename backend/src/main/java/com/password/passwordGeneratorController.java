@@ -68,8 +68,8 @@ public class passwordGeneratorController {
     public String passwordGenerator(@RequestParam(defaultValue = "10", required = false) Integer length,
             @RequestParam(defaultValue = "true", required = false) boolean includeUpperCase,
             @RequestParam(defaultValue = "true", required = false) boolean includeLowerCase,
-            @RequestParam(defaultValue = "true", required = false) Boolean includeNums,
-            @RequestParam(defaultValue = "true", required = false) boolean includeSymbols) {
+            @RequestParam(defaultValue = "true", required = false) boolean includeNums,
+            @RequestParam(defaultValue = "false", required = false) boolean includeSymbols) {
         StringBuilder password = new StringBuilder();
         Random random = new Random();
         String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

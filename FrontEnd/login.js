@@ -171,3 +171,15 @@ sliderInput.addEventListener('input', () => {
 // Set the initial value displayed next to the slider
 sliderValue.textContent = sliderInput.value;
 
+// http request logic
+axios.get('http://localhost:8080/api/passwordGenerator?length=12&nums=1')
+  .then(function(response) {
+    const data = response.data;
+    // Store or use the data as needed
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.error('Error:', error);
+  });
+
+
